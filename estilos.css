@@ -64,7 +64,14 @@ header .boton{
 
 .contenedor{
     width: 100%;
-    max-width: 1200px;
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    padding: 40px 0px;
+}
+.contenedorXL{
+    width: 100%;
+    max-width: 1600px;
     margin: auto;
     overflow: hidden;
     padding: 40px 0px;
@@ -72,22 +79,47 @@ header .boton{
 .sobre-nosotros{
     text-align: center;
     font-size: 70px;
-    margin-bottom: 10px;
+    margin-bottom: 60px;
+    margin-top: 70px;
     font-weight: 100;
     
 }
+.quiensoy{
+    font-size: 50px;
+    text-align: center;
+}
+.logo1{
+    margin-top: -100px;
+    margin-left: 300px;
+    margin-bottom: -150px;
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+}
+.logoprincipal{
+    margin-top: -200px;
+}
+
 .slogan{
     font-size: 24px;
     font-weight: 300;
     text-align: center;
     margin-bottom: 90px;
+    margin-top: -160px;
 }
 .parrafo{
     margin-bottom: 13px;
     font-weight: 300;
     text-align: justify;
-    font-size: 20px;
-    margin-top: 20px;
+    font-size: 30px;
+    margin-top: 40px;
+    border-left: 3px solid black;
+    padding: 20px;
+    border-right: 3px solid black;
+}
+.parrafo:hover{
+    background-image: linear-gradient(to right, #a0928075 0%, #9797976b 100%);;
+    border-radius: 32px;
 }
 .acerca-de .boton{
     display: inline-block;
@@ -98,12 +130,13 @@ header .boton{
     border: 3px solid rgb(42, 38, 38);
     color: rgb(34, 29, 29);
     font-size: 30px;
-    text-align: center;
+   text-align: center;
     text-decoration: none;
     border-radius: 16px;
     letter-spacing: 2px;
     margin-top: 60px;
-    
+    margin-left: 380px;
+    margin-bottom: 80px;
 }
 .galeria{
     width: 100%;
@@ -113,10 +146,11 @@ header .boton{
     position: relative;
 }
 .imagenes{
-    width: 25%;
+    width: 100%;
     height: 600px;
     overflow: hidden;
     position: relative;
+    opacity: 70%;
     
 }
 .imagenes img{
@@ -168,10 +202,13 @@ header .boton{
 
 
 }
+.card h4{
+    margin-bottom: 15px;
+}
 .card{
     margin: 10px 0px;
     width: 30%;
-    height: 300px;
+    height: 350px;
     text-align: center;
     padding: 20px;
     box-shadow: 0px 0px 9px 0px #ffae00; 
@@ -251,6 +288,7 @@ header .boton{
     transform: scale(1.0);
     width: 35%;
     height: 750px;
+    cursor: pointer;
     
 }
 .precio2:hover{
@@ -260,7 +298,7 @@ header .boton{
     width: 35%;
     height: 790px;
     bottom: 200px;
-    
+    cursor: pointer;
 }
 .precio3:hover{
     background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
@@ -268,7 +306,7 @@ header .boton{
     transform: scale(1.0);
     width: 35%;
     height: 790px;
-    
+    cursor: pointer;
 } 
 
 .cont-ul{
@@ -310,7 +348,7 @@ header .boton{
 .button:hover{
     background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
     transition: .3s ease-in ;
-    transform: scale(1.4);
+    transform: scale(1.1);
     cursor: pointer;
 }
 
@@ -326,10 +364,10 @@ header .boton{
     margin-left:15px;
     margin-top: 100px;
     margin-bottom:80px;
-    padding: 15px 20px;
+    padding: 13px 17px;
     border:  3px solid #bf98e7;
     border-radius: 28px;
-    font-size: 20px;
+    font-size: 18px;
     color: rgb(255, 255, 255);
     background-image: linear-gradient(135deg, #aeb7df 0%, #bf98e7 100%);
 
@@ -352,13 +390,14 @@ header .boton{
   .galeria-work{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin: 10px;
 
   }
   .cont-work{
     width: 31%;
     border-radius: 6px;
-    box-shadow: 0 0 6px 0 rgba(0,0,0,.5);
+    box-shadow: 4px 4px 6px 1px rgb(219, 157, 255);
     height: 700px;
     overflow: hidden;
     margin-bottom: 45px;
@@ -397,3 +436,84 @@ header .boton{
       margin-top: 20px;
       font-weight: 400;
   }
+
+
+
+
+
+/* Footer */
+
+.footer{
+    margin-top: 200px;
+    position: relative;
+    --padding-container: 160px 0 50px ;
+
+}
+
+
+.footer::before{
+    content: "";
+    position: absolute;
+    width: 70%;
+    height: 2px;
+    
+    background-image: linear-gradient(120deg, #000000 0%, #000000 100%);
+    top: 0;
+    left: 320px;
+    clip-path: polygon( 0, 100% 0, 50% 100%);
+
+}
+
+.footer__contact{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    place-items: center;
+    margin-bottom: 30px;
+}
+
+.footer__copy{
+    margin: 20px 0;
+    font-weight: 300;
+}
+
+.footer__social{
+    display: flex;
+    padding-top: 30px;
+    flex-wrap: wrap;
+}
+
+.footer__link{
+    width: 60px;
+    height: 60px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__icon{
+    width: 30px;
+}
+
+
+.footer__picture{
+    margin: 0;
+}
+
+.footer__img{
+    width: 100%;
+}
+
+.footer__copyright{
+    padding-top: 30px;
+    border-top: 2px solid #918484;
+    text-align: center;
+}
+
+.footer__copyright::after{
+    content: " hola@alexcgdesign.com";
+}
